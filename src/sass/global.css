@@ -1,0 +1,32 @@
+/* Global styles: app-wide defaults */
+body {
+  background-color: #f0f0f5;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Shared reusable row styling */
+.row-item {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #87CEEB;
+  transition: all 0.3s ease;
+}
+
+.row-item:hover {
+  background-color: #f0f0f5;
+  font-size: 18px;
+  border: 2px solid black;
+}
+
+/* Shared text styles */
+.text-item,
+.text-heading {
+  display: inline-block;
+  width: 20%;
+}
+
+.text-heading {
+  font-weight: bold;
+}
