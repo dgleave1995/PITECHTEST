@@ -16,19 +16,18 @@
 </template>
 
 <script setup>
+import { defineAsyncComponent } from 'vue'
 import home from '../display-configs/home.js'
-import Heading from '../components/heading/heading.vue'
-import TileSelectWrapper from '../components/tile-select-wrapper/TileSelectWrapper.vue'
-import OutputSummaryList from '../components/output-summary-list/OutputSummaryList.vue'
 
-const componentsMap = {
-  TileSelectWrapper,
-  OutputSummaryList,
-  Heading
-}
+// Automatically import all Vue components from the components folder
+const components = import.meta.glob('../components/**/*.vue')
 
+// Resolve component dynamically based on name from config
 function resolveComponent(name) {
-  return componentsMap[name] || 'div'
+  // Find the path that ends with /[ComponentName].vue
+  const path = Object.keys(components).find((p) => p.endsWith(`/${name}.vue`))
+  if (!path) return 'div' // fallback if component not found
+  return defineAsyncComponent(components[path])
 }
 </script>
 
