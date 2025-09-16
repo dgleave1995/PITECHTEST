@@ -6,20 +6,20 @@
     <h5>Outbound Routes:</h5>
     <ul>
       <li
-        v-for="(alt, i) in item.outboundAlternatives.slice(1)"
-        :key="'out-' + i"
-      >
-        {{ alt.route }} (£{{ alt.cost }})
+        v-for="(item, index) in item.outboundAlternatives.slice(1)"  
+        :key="index"
+      >                                                     <!-- Presents the 2nd best outbound flight -->
+        {{ item.route }} (£{{ item.cost }})
       </li>
     </ul>
 
     <h5>Inbound Routes:</h5>
     <ul>
       <li
-        v-for="(alt, i) in item.inboundAlternatives.slice(1)"
-        :key="'in-' + i"
-      >
-        {{ alt.route }} (£{{ alt.cost }})
+        v-for="(item, index) in item.inboundAlternatives.slice(1)"
+        :key="index"
+      >                                                   <!-- Presents the 2nd best inbound flight -->
+        {{ item.route }} (£{{ item.cost }})
       </li>
     </ul>
   </div>
@@ -29,7 +29,10 @@
 export default {
   name: "ItemSummary",
   props: {
-    item: { type: Object, required: true },
+    item: { 
+      type: Object, 
+      required: true 
+    },
   },
 };
 </script>

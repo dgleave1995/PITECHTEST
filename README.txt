@@ -58,3 +58,11 @@ src
         |_Home.vue
     |_sevices
         |_journey-calculator.js
+
+UI:
+
+Upon the UI you will be presented with 3 menu options.
+1: Holiday analysis - This will display the output of the holiday route finder task.
+    |_ When opened, you will be presented with a table outputting the answers to the best journeys. Clicking on one of these will then give a breakdown of the next set of cheapest flights.
+2: Read Me - Although perhaps redundant once the project is up and running, this shows the necessary requirement to run the project.
+3: Considerations - This will talk about what I wish I could have done / done better with enough time.

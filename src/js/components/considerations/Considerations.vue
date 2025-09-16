@@ -1,17 +1,18 @@
 <template>
-    <pre>{{Considerations}}</pre>
+  <pre class="text-file">{{ Considerations }}</pre>
 </template>
 
 <script>
 import Considerations from '../../../../Considerations.txt?raw'
 
 export default {
-    name: 'Considerations',
+  name: 'Considerations',
 
-    data(){
-        return {
-            Considerations,
-        }
+  data() {
+    return {
+      Considerations,
     }
+  }
 }
 </script>
+

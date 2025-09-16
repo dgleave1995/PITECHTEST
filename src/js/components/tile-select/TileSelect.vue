@@ -27,24 +27,38 @@ import Considerations from '../considerations/Considerations.vue'
 
 export default {
   props: {
-    title: { type: String, required: true },
-    component: { type: String, required: false }
+    title: { 
+      type: String, 
+      required: true 
+    },
+    component: { 
+      type: String, 
+      required: false 
+    }
   },
+
+  components: {
+    OutputSummaryList,
+    ReadMe,
+    Considerations
+  },
+
   data() {
     return {
       isExpanded: false
     }
   },
+
   computed: {
     resolvedComponent() {
-      const map = {
-        OutputSummaryList,
-        ReadMe,
-        Considerations
-      }
-      return map[this.component] || null
+      return {
+        OutputSummaryList: this.$options.components.OutputSummaryList,
+        ReadMe: this.$options.components.ReadMe,
+        Considerations: this.$options.components.Considerations
+      }[this.component] || null
     }
   },
+
   methods: {
     expand() {
       if (!this.isExpanded) {
@@ -57,6 +71,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 .menuBox {

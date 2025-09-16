@@ -1,5 +1,6 @@
 <template>
   <div class="tile-container">
+    <!-- Loops through the menu prop and for each item displays a new menu icon -->
     <TileSelect 
       v-for="(value, key) in menus" 
       :key="key" 
@@ -14,28 +15,29 @@ import TileSelect from '../tile-select/TileSelect.vue'
 
 export default {
   name: 'TileSelectWrapper',
-  components: { TileSelect },
+
+  components: { 
+    TileSelect 
+  },
+
   props: {
     menus: {
       type: Array,
       required: true
     }
   },
-  mounted() {
-    console.log('menus prop:', this.menus)
-  }
 }
 </script>
 
 <style scoped>
 .tile-container {
-  display: flex;                /* enables flex layout */
-  flex-wrap: wrap;              /* wrap to next line if too many tiles */
-  justify-content: center;      /* horizontal centering */
-  align-items: center;          /* vertical centering */
-  height: 100%;                 /* ensure container fills parent for vertical centering */
-  gap: 20px;                    /* space between tiles */
-  min-height: 300px;            /* optional: makes vertical centering noticeable */
+  display: flex;                
+  flex-wrap: wrap;              
+  justify-content: center;      
+  align-items: center;          
+  height: 100%;                 
+  gap: 20px;                    
+  min-height: 300px;            
   min-width: fit-content;
 }
 </style>

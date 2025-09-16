@@ -7,7 +7,7 @@
     <div class="text-item">£{{ item.totalCost }}</div>
   </div>
 
-  <!-- ✅ Pass item as a prop -->
+  <!-- Lists all relevant info for the price and format of the journey -->
   <ItemSummary v-if="displayData" :item="item" />
 </template>
 

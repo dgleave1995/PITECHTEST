@@ -30,3 +30,9 @@ body {
 .text-heading {
   font-weight: bold;
 }
+
+.text-file {
+  white-space: pre-wrap;     /* preserve formatting but allow wrapping */
+  word-wrap: break-word;     /* break long words if needed */
+  overflow-wrap: anywhere;   /* modern replacement for word-wrap */
+}

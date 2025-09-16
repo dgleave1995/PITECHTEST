@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3 class="text-lg font-bold mb-2">Output Summary List</h3>
-    <div>
+    <div> <!-- Headings of the table -->
       <div class="text-heading">Vehicle</div>
       <div class="text-item">Vehicle Cost</div>
       <div class="text-item">Outbound Route</div>
@@ -9,12 +9,12 @@
       <div class="text-item">Total Cost</div>
     </div>
 
-    <!-- Data Rows -->
+    <!-- Loops through OutputSummaryItem to display each journey -->
     <OutputSummaryItem
       v-for="(journey, index) in journeys"
       :key="index"
       :item="journey"
-    />
+    /> 
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   components: { OutputSummaryItem },
   data() {
     return {
-      journeys: journeyCalculator.calculateJourneySuggestions(journeysJson)
+      journeys: journeyCalculator.calculateJourneySuggestions(journeysJson) //calculateJourneySuggestions service to display the cheapest journeys
     }
   }
 }

@@ -1,5 +1,6 @@
 <template>
-    <pre class="text-format"> {{README}}</pre>
+    <!-- Displays text from ReadME.txt -->
+    <pre class="text-file text-format"> {{README}}</pre>
 </template>
 
 <script>

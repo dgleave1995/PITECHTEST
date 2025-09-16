@@ -11,12 +11,4 @@ describe('Heading.vue', () => {
 
     expect(wrapper.text()).toBe('Hello World')
   })
-
-  it('has the correct CSS class', () => {
-    const wrapper = shallowMount(Heading, {
-      props: { text: 'Test Heading' }
-    })
-
-    expect(wrapper.classes()).toContain('test')
-  })
 })

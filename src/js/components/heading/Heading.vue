@@ -1,5 +1,5 @@
 <template>
-<h1 class="test">{{text}}</h1>
+<h1 class="header-format">{{text}}</h1>
 </template>
 
 <script>
@@ -16,7 +16,7 @@
 </script>
 
 <style scoped>
- .test{
+ .header-format{
     color: #d80751;
  }
 </style>

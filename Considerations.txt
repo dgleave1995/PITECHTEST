@@ -1,1 +1,15 @@
-Explanation of items taken into consideration to improve the project and also what would be done to improve the project given more time.
+Considerations:
+
+When creating this project, there were three main targets I wanted to achieve to be able to decalre the project 'complete'.
+1: Output of correct journeys
+2: FUlly unit tested components
+3: A intuitive unit
+
+I feel that I have accomplished these, however there are aspects, given enough time, that I would have liked to implement and improved.
+
+Improvement:
+
+1: Solittig of the journey-calculator service into multiple independant functions that could be applied to a wider range of uses.
+2: Creating storybook files for each component (To allow for stand alone component testing)
+3: A more detailed output of the analysis results as well as analysis of each output and how we got to that answer.
+3: Accessibility. While I attempt to incorporate accessible development into everything I do, time constraints did not allow me to be as thorough as I would have liked. I would have added alternative colour schemes for differing levels of colour blindness, ensured a screen reader could function correctly and ensured the UI would function on multiple devices based on screen size and OS.
